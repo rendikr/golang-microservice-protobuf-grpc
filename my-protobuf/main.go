@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"my-protobuf/basic"
-	"my-protobuf/jobsearch"
 	"time"
 )
 
@@ -19,13 +18,17 @@ func main() {
 	log.SetFlags(0)
 	log.SetOutput(new(logWriter))
 
-	basic.BasicHello()
+	// basic.BasicHello()
 	basic.BasicUser()
-	basic.ProtoToJsonUser()
-	basic.JsonToProtoUser()
+	// basic.ProtoToJsonUser()
+	// basic.JsonToProtoUser()
 
-	basic.BasicUserGroup()
+	// basic.BasicUserGroup()
 
-	jobsearch.JobSearchSoftware()
-	jobsearch.JobSearchCandidate()
+	// jobsearch.JobSearchSoftware()
+	// jobsearch.JobSearchCandidate()
+
+	basic.BasicUnmarshalAnyKnown()
+	basic.BasicUnmarshalAnyNotKnown()
+	basic.BasicUnmarshalAnyIs()
 }
