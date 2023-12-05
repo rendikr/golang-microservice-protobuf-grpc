@@ -8,6 +8,12 @@ import (
 )
 
 func BasicUser() {
+	addr := basic.Address{
+		Street:  "Jl. ABC",
+		City:    "Jakarta",
+		Country: "Indonesia",
+	}
+
 	u := basic.User{
 		Id:       99,
 		Username: "johndoe",
@@ -15,6 +21,7 @@ func BasicUser() {
 		Password: []byte("mypassword"),
 		Emails:   []string{"johndoe@example.com"},
 		Gender:   basic.Gender_GENDER_MALE,
+		Address:  &addr,
 	}
 
 	jsonBytes, _ := protojson.Marshal(&u)
@@ -23,6 +30,12 @@ func BasicUser() {
 }
 
 func ProtoToJsonUser() {
+	addr := basic.Address{
+		Street:  "Jl. ABC",
+		City:    "Jakarta",
+		Country: "Indonesia",
+	}
+
 	u := basic.User{
 		Id:       98,
 		Username: "janedoe",
@@ -30,6 +43,7 @@ func ProtoToJsonUser() {
 		Password: []byte("mypassword"),
 		Emails:   []string{"janedoe@example.com"},
 		Gender:   basic.Gender_GENDER_FEMALE,
+		Address:  &addr,
 	}
 
 	jsonBytes, _ := protojson.Marshal(&u)
@@ -46,7 +60,12 @@ func JsonToProtoUser() {
 		"emails":[
 			"peter@example.com"
 		],
-		"gender":"GENDER_MALE"
+		"gender":"GENDER_MALE",
+		"address": {
+			"street": "JL. ABC",
+			"city": "Jakarta",
+			"country": "Indonesia"
+		}
 	}
 	`
 

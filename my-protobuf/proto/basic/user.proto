@@ -8,6 +8,12 @@ enum Gender {
   GENDER_FEMALE = 2;
 }
 
+message Address {
+  string street = 1;
+  string city = 2;
+  string country = 3;
+}
+
 message User {
   uint32 id = 1;
   string username = 2;
@@ -15,4 +21,5 @@ message User {
   bytes password = 4;
   repeated string emails = 5;
   Gender gender = 6;
+  Address address = 7;
 }
