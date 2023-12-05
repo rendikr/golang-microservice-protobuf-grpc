@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"my-protobuf/basic"
+	"my-protobuf/jobsearch"
 	"time"
 )
 
@@ -24,4 +25,7 @@ func main() {
 	basic.JsonToProtoUser()
 
 	basic.BasicUserGroup()
+
+	jobsearch.JobSearchSoftware()
+	jobsearch.JobSearchCandidate()
 }
