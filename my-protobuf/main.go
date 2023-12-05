@@ -22,4 +22,6 @@ func main() {
 	basic.BasicUser()
 	basic.ProtoToJsonUser()
 	basic.JsonToProtoUser()
+
+	basic.BasicUserGroup()
 }
