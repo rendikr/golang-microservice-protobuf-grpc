@@ -172,3 +172,27 @@ func BasicUnmarshalAnyIs() {
 		log.Println("Not PaperMail, but :", a.TypeUrl)
 	}
 }
+
+func BasicOneOf() {
+	socialMedia := basic.SocialMedia{
+		SocialMediaPlatform: "my-social-media-platform",
+		SocialMediaUsername: "my-social-media-username",
+	}
+
+	ecomm := basic.User_SocialMedia{
+		SocialMedia: &socialMedia,
+	}
+
+	u := basic.User{
+		Id:                    99,
+		Username:              "johndoe",
+		IsActive:              true,
+		Password:              []byte("mypassword"),
+		Emails:                []string{"johndoe@example.com"},
+		Gender:                basic.Gender_GENDER_MALE,
+		ElectronicCommChannel: &ecomm,
+	}
+
+	jsonBytes, _ := protojson.Marshal(&u)
+	log.Println(string(jsonBytes))
+}

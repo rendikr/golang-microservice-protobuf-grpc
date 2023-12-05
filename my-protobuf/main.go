@@ -31,4 +31,5 @@ func main() {
 	basic.BasicUnmarshalAnyKnown()
 	basic.BasicUnmarshalAnyNotKnown()
 	basic.BasicUnmarshalAnyIs()
+	basic.BasicOneOf()
 }
