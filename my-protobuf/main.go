@@ -20,4 +20,6 @@ func main() {
 
 	basic.BasicHello()
 	basic.BasicUser()
+	basic.ProtoToJsonUser()
+	basic.JsonToProtoUser()
 }

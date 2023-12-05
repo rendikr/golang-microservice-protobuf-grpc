@@ -11,7 +11,7 @@ enum Gender {
 message User {
   uint32 id = 1;
   string username = 2;
-  bool is_active = 3;
+  bool is_active = 3 [json_name = "is_active"];
   bytes password = 4;
   repeated string emails = 5;
   Gender gender = 6;
