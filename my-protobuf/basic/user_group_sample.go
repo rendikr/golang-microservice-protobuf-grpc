@@ -19,6 +19,10 @@ func BasicUserGroup() {
 			Street:  "JL. ABC",
 			City:    "Jakarta",
 			Country: "Indonesia",
+			Coordinate: &basic.Address_Coordinate{
+				Latitude:  192.11441784,
+				Longitude: -128758198,
+			},
 		},
 	}
 
@@ -33,6 +37,10 @@ func BasicUserGroup() {
 			Street:  "JL. DEF",
 			City:    "Jakarta",
 			Country: "Indonesia",
+			Coordinate: &basic.Address_Coordinate{
+				Latitude:  192.11441784,
+				Longitude: -128758198,
+			},
 		},
 	}
 
